@@ -16,8 +16,14 @@
     color: #FFF;
     cursor: pointer;
     border: 0;
-
 }
+    .section-title{
+        font-size:2.8rem ;
+        font-weight: 700;
+        color: #131313;
+    }
+
+
 /* HEADER */
 header{
     background-color:rgba(255, 144, 14, 0.10);
@@ -28,11 +34,6 @@ nav{
     justify-content:space-between ;
     /* padding: 50px 240px; */
     align-items: center;
-}
-.nav-title{
-    font-size:2.8rem ;
-    font-weight: 700;
-    color: #131313;
 }
 nav > ul{
     display: flex;
@@ -87,16 +88,51 @@ main{
 .team-title{
     font-size: 2.8rem;
 }
-.team-title .quick-list{
+/* .team-title .quick-list{
     color: #727272;
     font-weight: 500px
 }
 .team-title .text-features{
     color: rgb(239, 59, 89);
     font-weight: 700px;
+} */ 
+ div > .team-title .pink-features{
+   color: rgb(239, 59, 89)  ; 
 }
+/* FACTSSS */
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid rgb(239, 59, 89);
+    text-align: center;
+    padding: 30px;
 
-
+}
+.facts-card-container .text-light-gray{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+.facts-card-container .cards-stats{
+    font-size: 2.8rem;
+    color: #424242;
+}
+.sponsers{
+    text-align: center;
+}
+.sponsers-img-conatiner{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+.sponsers-img-conatiner img{
+    width: 165px;
+}
 
 
 
@@ -115,18 +151,24 @@ main{
     header{
         padding: 20px;
     }
-    nav, .teams-container
+    nav, 
+    .teams-container,
+    .facts-card-container,
+    .sponsers-img-conatiner
     {
         flex-direction: column;
     }
     .teams-img-container{
         grid-template-columns: 1fr;
     }
-    .teams-content{
+    .teams-content .facts-card-container {
         padding-right: 20px;
         padding-left: 70px;
         }
-
+    .facts-card-container{
+        gap: 20px;
+    }
+    
 
 }
 @media screen and (min-width:576px) and (max-width:960px) {
@@ -134,7 +176,11 @@ main{
     header{
         padding: 50px;
     }
-    nav{
+    nav, 
+    .teams-container,
+    .sponsers-img-conatiner
+    
+    {
         flex-direction: column;
     }
 }
